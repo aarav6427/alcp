@@ -16,19 +16,19 @@
     "stack": "heroku-20",
     "env": {
       "API_ID": {
-        "description": "Enter your API id. You can generate it by visiting https://my.telegram.org/auth. This is required to connect to the Telegram API.",
+        "description": "2645474",
         "required": true
       },
       "API_HASH": {
-        "description": "Enter your API Hash. You can generate it by visiting https://my.telegram.org/auth. This is also required for Telegram API access.",
+        "description": "6c9a5044d2f2c2350ac20b3838a7896e",
         "required": true
       },
       "BOT_TOKEN": {
-        "description": "Enter your bot token, which can be obtained by talking to @BotFather on Telegram. This token is used to authenticate your bot with Telegram servers.",
+        "description": "7919367706:AAHHUP6WcmYh6INvMFqEjL_k9EWQcyYkKK4",
         "required": true
       },
       "OWNER_ID": {
-        "description": "Enter your Telegram user ID. This will give you administrative access to the bot. You can obtain your user ID using the @userinfobot on Telegram.",
+        "description": "929216155",
         "required": true
       },
       "SUDO_USERS": {
