@@ -1,0 +1,73 @@
+
+{
+    "name": "𝐓𝐞𝐱𝐭 Uploader",
+    "description": "Download videos from various websites using this Telegram bot that allows you to extract videos and media files.",
+    "logo": "https://graph.org/file/45f562dc05b2874c7277e.jpg",
+    "keywords": [
+      "text-video",
+      "video-extract",
+      "pyrogram",
+      "telegram-bot",
+      "aria2",
+      "ffmpeg"
+    ],
+    "repository": "https://github.com/Adarshbhai/Bot1",
+    "success_url": "https://telegram.me/imendaxpublic",
+    "stack": "heroku-20",
+    "env": {
+      "API_ID": {
+        "description": "Enter your API id. You can generate it by visiting https://my.telegram.org/auth. This is required to connect to the Telegram API.",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Enter your API Hash. You can generate it by visiting https://my.telegram.org/auth. This is also required for Telegram API access.",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "Enter your bot token, which can be obtained by talking to @BotFather on Telegram. This token is used to authenticate your bot with Telegram servers.",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "Enter your Telegram user ID. This will give you administrative access to the bot. You can obtain your user ID using the @userinfobot on Telegram.",
+        "required": true
+      },
+      "SUDO_USERS": {
+        "description": "Enter a comma-separated list of Telegram user IDs who should have superuser privileges for managing the bot. For example: '123456789,987654321'.",
+        "required": true
+      },
+      "DOWNLOAD_PATH": {
+        "description": "Specify the download path where the bot will store temporary files. This is optional and defaults to '/tmp/' on Heroku.",
+        "required": false
+      }
+    },
+    "addons": [],
+    "buildpacks": [
+      {
+        "url": "https://github.com/amivin/aria2-heroku.git"
+      },
+      {
+        "url": "heroku/python"
+      },
+      {
+        "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+      }
+    ],
+    "formation": {
+      "web": {
+        "quantity": 1,
+        "size": "free"
+      }
+    },
+    "scripts": {
+      "postdeploy": "echo 'Deployment is complete!'"
+    },
+    "env_var_example": {
+      "API_ID": "123456",
+      "API_HASH": "abcd1234abcd1234abcd1234abcd1234",
+      "BOT_TOKEN": "1234567890:ABCDEF12345ghijkLMNOPQrstuvxyz",
+      "OWNER_ID": "123456789",
+      "SUDO_USERS": "987654321,112233445",
+      "DOWNLOAD_PATH": "/tmp/"
+    }
+  }
+  
